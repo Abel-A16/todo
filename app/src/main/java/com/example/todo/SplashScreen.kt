@@ -9,10 +9,8 @@ import android.os.Looper
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent= Intent(this,MainActivity::class.java)
-            startActivity(intent)
-        },5000)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+
     }
 }
