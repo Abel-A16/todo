@@ -10,6 +10,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CreateCard"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:padding="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
@@ -17,35 +32,77 @@
         android:layout_height="wrap_content"
         android:text="Enter Details"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:gravity="center"
         android:fontFamily="sans-serif"
         />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/change"
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/high" />
     <EditText
         android:id="@+id/create_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Task"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/custom_edittext"
         android:padding="15dp"
         android:textColorHint="#BFBBBB"
         android:textColor="@color/white"/>
-    <EditText
+    </LinearLayout>
+    <TextView
         android:id="@+id/create_priority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Priority"
-        android:background="@drawable/custom_edittext"
         android:layout_marginTop="35dp"
-        android:padding="15dp"
+        android:padding="5dp"
         android:textColorHint="#BFBBBB"
+        android:gravity="center"
+        android:text="SELECT PRIORITY"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif"
         android:textColor="@color/white"/>
-    <Button
-        android:id="@+id/save_button"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Save"/>
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/high_priority"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:backgroundTint="#F05454"
+            android:text="HIGH"/>
+        <Button
+            android:id="@+id/medium_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:backgroundTint="#EDC988"
+            android:text="MEDIUM"/>
+        <Button
+            android:id="@+id/low_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:text="LOW"/>
+    </LinearLayout>
 
 </LinearLayout>

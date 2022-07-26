@@ -1,6 +1,6 @@
 package com.example.todo
 
-data class CardInfo(
+data class model(
     var title:String,
-    var priority:String
+    var priority:Int
 )

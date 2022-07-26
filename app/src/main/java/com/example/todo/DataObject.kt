@@ -1,26 +1,25 @@
 package com.example.todo
 
-import android.icu.text.CaseMap
-
 object DataObject {
-    var listdata= mutableListOf<CardInfo>()
-    fun setData(title: String,priority:String){
-        listdata.add(CardInfo(title,priority))
+    var listdata= mutableListOf<model>()
+    fun setData(title: String, pr:Int){
+        listdata.add(model(title,pr))
     }
-    fun getAllData():List<CardInfo>{
+    fun getAllData():List<model>{
         return listdata
     }
     fun deleteAll(){
         listdata.clear()
     }
-    fun getData(pos:Int): CardInfo {
+    fun getData(pos:Int): model {
         return listdata[pos]
     }
     fun deleteData(pos: Int){
         listdata.removeAt(pos)
     }
-    fun updateData(pos: Int,title: String,priority: String){
+    fun updateData(pos: Int,title: String, pr:Int){
         listdata[pos].title=title
-        listdata[pos].priority=priority
+        listdata[pos].priority = pr
     }
+
 }

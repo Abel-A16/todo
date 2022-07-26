@@ -2,4 +2,6 @@
     <string name="app_name">To Do</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialogTitle">clear data</string>
+    <string name="dialogMessage">Do you want to clear all task?</string>
 </resources>
