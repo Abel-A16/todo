@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
             var dialog = detailFragment()
             dialog.show(supportFragmentManager,dialog.tag)
         }
-
         deleteAll.setOnClickListener {
             if (DataObject.getAllData().isNotEmpty()) {
                 val builder = AlertDialog.Builder(this)

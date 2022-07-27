@@ -42,6 +42,7 @@ class detailFragment : BottomSheetDialogFragment() {
         low_priority.setOnClickListener {
             changeColor(2)
         }
+        isCancelable=false
     }
     fun SaveData( position: Int) {
         if (create_title.text.toString().trim { it <= ' ' }.isNotEmpty()) {

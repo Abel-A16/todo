@@ -18,6 +18,7 @@ class Adapter(var data: List<model>) : RecyclerView.Adapter<Adapter.viewHolder>(
         var title = itemView.title
         var layout = itemView.mylayout
         var pr = itemView.priority
+        var check = itemView.check
 
     }
 
@@ -30,14 +31,17 @@ class Adapter(var data: List<model>) : RecyclerView.Adapter<Adapter.viewHolder>(
         when (data[position].priority) {
             0 -> {
                 holder.layout.setBackgroundColor(Color.parseColor("#F05454"))
+                holder.check.setBackgroundResource(R.drawable.high)
                 holder.pr.text = "High"
             }
             1 -> {
                 holder.layout.setBackgroundColor(Color.parseColor("#EDC988"))
+                holder.check.setBackgroundResource(R.drawable.medium)
                 holder.pr.text = "Medium"
             }
             else -> {
                 holder.layout.setBackgroundColor(Color.parseColor("#4CAF50"))
+                holder.check.setBackgroundResource(R.drawable.low)
                 holder.pr.text = "Low"
             }
         }
@@ -47,6 +51,9 @@ class Adapter(var data: List<model>) : RecyclerView.Adapter<Adapter.viewHolder>(
             val intent = Intent(holder.itemView.context, UpdateCard::class.java)
             intent.putExtra("id", position)
             holder.itemView.context.startActivity(intent)
+        }
+        holder.check.setOnClickListener {
+            holder.title.setBackgroundResource(R.drawable.strike)
         }
 
     }
